@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags. -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="natural selection simulation genetic algorithm">
+    <title>Natural Selection Simulation Genetic Algorithm</title>
+    <!-- Include css files. -->
+    <link rel="stylesheet" type="text/css" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/fa.min.css">
+</head>
+
+<body>
+    <div class="container w-full mx-auto max-w-8/12 md:px-4 pb-8">
+        <!-- Header. -->
+        <center>
+            <h1 class="font-bold display-1 underline">
+                Natural Selection Simulation
+            </h1>
+            <h4 class="text-subtitle mb-6">The goal is to create a system where autonomous steering agents evolve the
+                behavior of eating food
+                (+) and avoiding poison (x).These steering
+                behaviors are largely independent of the particulars of the character's means of locomotion.</h4>
+        </center>
+
+        <!-- Config. -->
+        <div class="card p-2 px-4 mx-auto max-w-xl">
+            <!-- Population size configuration. -->
+            <h4>Starting Population</h4>
+            <select class="w-full border-2 border-gray p-2 mb-3 capitalize focus:outline-none focus:border-primary" id="totpop_id" oninput="javascript: totalPopulation = parseInt(this.value);">
+                <option selected value="4">4</option>
+                <option value="8">8</option>
+                <option value="10">10</option>
+            </select>
+            <!-- Max population size configuration -->
+            <h4>Maximum Population</h4>
+            <select class="w-full border-2 border-gray p-2 mb-3 capitalize focus:outline-none focus:border-primary" id="maxpop_id" oninput="javascript: maxPopulation = parseInt(this.value);">
+                <option selected value="80">80</option>
+                <option value="100">100</option>
+                <option value="120">120</option>
+            </select>
+
+            <!-- Mutation rate -->
+            <h4>Mutation Rate</h4>
+            <select class="w-full border-2 border-gray p-2 mb-3 capitalize focus:outline-none focus:border-primary" id="mutation_rate_id"
+                oninput="javascript: newMutationRate = parseFloat(this.value);">
+                <option selected value="0.01">1%</option>
+                <option value="0.05">5%</option>
+                <option value="0.1">10%</option>
+                <option value="0.3">30%</option>
+                <option value="0.9">90%</option>
+                <option value="0.99">99%</option>
+            </select>
+
+            <!-- Food and poison size configuration. -->
+            <h4>Starting Food and poison</h4>
+            <select class="w-full border-2 border-gray p-2 mb-3 capitalize focus:outline-none focus:border-primary" id="nutrition_id"
+                oninput="javascript: totalNutrition = parseInt(this.value);">
+                <option selected value="5">5</option>
+                <option value="8">8</option>
+                <option value="10">10</option>
+            </select>
+            <!-- Start algorithm. -->
+            <button id="submit_id" class="mb-2" onclick="javascript: this.innerHTML = ' ReStart'; startAlgorithm();"
+                type="submit">Start</button>
+            <div id="result_id" class="hidden">
+                <!-- Result info -->
+                <h4>Population Size <font class="text-primary" id="population_id">0</font>
+                </h4>
+            </div>
+        </div>
+
+
+    </div>
+    <center>
+        <!-- Canvas with map image. -->
+        <canvas style="background: url('assets/background.png');" class="shadow-md mt-3 mb-2 hide-on-md" height="500"
+            width="500" id="canvas"></canvas>
+    </center>
+    <!-- Footer. -->
+    <div class="mb-2 card text-center p-2 mx-auto max-w-xl">
+        <h4 class="text-subtitle"><a href="https://github.com/lovesaroha/Natural-Selection-Simulation"
+                target="_blank">LoveSaroha/Natural-Selection-Simulation</a></h4>
+        <h3 class="text-subtitle font-bold mb-0 hover:underline cursor-pointer"
+            onclick="javascript: window.location = 'https://lovesaroha.com';">Love Saroha</h3>
+        <h4 class="text-gray">lovesaroha1994@gmail.com</h4>
+    </div>
+    <!-- Include script.js file -->
+    <script type="text/javascript" src="./assets/script.js"></script>
+</body>
+
+</html>
