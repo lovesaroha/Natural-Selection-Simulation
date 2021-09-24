@@ -3,4 +3,4 @@
 
 ![game](https://raw.githubusercontent.com/lovesaroha/gimages/main/16.png)
 
-[lovesaroha/p/Natural-Selection-Simulation](https://lovesaroha.com/p/Natural-Selection-Simulation)
+[lovesaroha/Natural-Selection-Simulation](https://js.lovesaroha.com/Natural-Selection-Simulation)
